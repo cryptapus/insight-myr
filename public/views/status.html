@@ -63,7 +63,7 @@
         <thead data-ng-include src="'/views/includes/infoStatus.html'"></thead>
         <tbody>
           <tr>
-            <td translate>Last Block Hash (Bitcoind)</td>
+            <td translate>Last Block Hash (Myriadcoind)</td>
             <td class="text-right ellipsis"><a href="/block/{{lastblockhash}}">{{lastblockhash}}</a></td>
           </tr>
           <tr>
@@ -117,7 +117,7 @@
     </div> <!-- END OF COL-8 -->
 
     <div class="col-xs-12 col-md-4 col-gray">
-      <h2 translate>Bitcoin node information</h2>
+      <h2 translate>Myriadcoin node information</h2>
       <table class="table" data-ng-controller="StatusController" data-ng-init="getStatus('Info')">
         <thead  data-ng-include src="'/views/includes/infoStatus.html'"></thead>
         <tbody>
@@ -142,8 +142,28 @@
             <td class="text-right">{{info.connections}}</td>
           </tr>
           <tr>
-           <td translate>Mining Difficulty</td>
-            <td class="text-right">{{info.difficulty}}</td>
+           <td translate>Mining Difficulty (sha256d)</td>
+            <td class="text-right">{{info.difficulty_sha256d}}</td>
+          </tr>
+          <tr>
+           <td translate>Mining Difficulty (scrypt)</td>
+            <td class="text-right">{{info.difficulty_scrypt}}</td>
+          </tr>
+          <tr>
+           <td translate>Mining Difficulty (groestl)</td>
+            <td class="text-right">{{info.difficulty_groestl}}</td>
+          </tr>
+          <tr>
+           <td translate>Mining Difficulty (skein)</td>
+            <td class="text-right">{{info.difficulty_skein}}</td>
+          </tr>
+          <tr>
+           <td translate>Mining Difficulty (qubit)</td>
+            <td class="text-right">{{info.difficulty_qubit}}</td>
+          </tr>
+          <tr>
+           <td translate>Mining Difficulty (yescrypt)</td>
+            <td class="text-right">{{info.difficulty_yescrypt}}</td>
           </tr>
           <tr>
             <td translate>Testnet</td>

@@ -57,10 +57,12 @@
               <span data-ng-show="!block.isMainChain" class="text-danger"> <span class="glyphicon glyphicon-warning-sign"></span> (Orphaned)</span>
             </td>
           </tr>
+          <!--
           <tr>
             <td><strong translate>Block Reward</strong></td>
-            <td class="text-right text-muted">{{$root.currency.getConvertion(block.reward) || block.reward + ' BTC'}}</td>
+            <td class="text-right text-muted">{{$root.currency.getConvertion(block.reward) || block.reward + ' XMY'}}</td>
           </tr> 
+          -->
           <tr>
             <td><strong translate>Timestamp</strong></td>
             <td class="text-right text-muted">{{block.time * 1000 | date:'medium'}}</td>
@@ -79,6 +81,10 @@
                 <span>{{block.merkleroot}}</span>
               </div>
             </td>
+          </tr>
+          <tr>
+            <td> <strong>Algorithm</strong></td>
+            <td class="text-right text-muted">{{block.pow_algo}}</td>
           </tr>
           <tr data-ng-show="block.previousblockhash">
             <td><strong translate>Previous Block</strong></td>
